@@ -37,7 +37,7 @@ export function generateStaticCharAtlasTexture(context: Window, canvasFactory: (
     ctx.beginPath();
     ctx.rect(i * cellWidth, 0, cellWidth, cellHeight);
     ctx.clip();
-    ctx.fillText(String.fromCharCode(i), i * cellWidth, cellHeight / 2);
+    ctx.fillText(String.fromCharCode(i), i * cellWidth, cellHeight / 2, this.cellWidth);
     ctx.restore();
   }
   // Default color bold
@@ -48,7 +48,7 @@ export function generateStaticCharAtlasTexture(context: Window, canvasFactory: (
     ctx.beginPath();
     ctx.rect(i * cellWidth, cellHeight, cellWidth, cellHeight);
     ctx.clip();
-    ctx.fillText(String.fromCharCode(i), i * cellWidth, cellHeight * 1.5);
+    ctx.fillText(String.fromCharCode(i), i * cellWidth, cellHeight * 1.5, cellWidth);
     ctx.restore();
   }
   ctx.restore();
@@ -64,7 +64,7 @@ export function generateStaticCharAtlasTexture(context: Window, canvasFactory: (
       ctx.rect(i * cellWidth, y, cellWidth, cellHeight);
       ctx.clip();
       ctx.fillStyle = config.colors.ansi[colorIndex].css;
-      ctx.fillText(String.fromCharCode(i), i * cellWidth, y + cellHeight / 2);
+      ctx.fillText(String.fromCharCode(i), i * cellWidth, y + cellHeight / 2, cellWidth);
       ctx.restore();
     }
   }
@@ -80,7 +80,7 @@ export function generateStaticCharAtlasTexture(context: Window, canvasFactory: (
       ctx.rect(i * cellWidth, y, cellWidth, cellHeight);
       ctx.clip();
       ctx.fillStyle = config.colors.ansi[colorIndex].css;
-      ctx.fillText(String.fromCharCode(i), i * cellWidth, y + cellHeight / 2);
+      ctx.fillText(String.fromCharCode(i), i * cellWidth, y + cellHeight / 2, cellWidth);
       ctx.restore();
     }
   }

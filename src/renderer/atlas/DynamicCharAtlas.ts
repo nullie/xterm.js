@@ -259,7 +259,7 @@ export default class DynamicCharAtlas extends BaseCharAtlas {
       this._tmpCtx.globalAlpha = DIM_OPACITY;
     }
     // Draw the character
-    this._tmpCtx.fillText(glyph.chars, 0, this._config.scaledCharHeight / 2);
+    this._tmpCtx.fillText(glyph.chars, 0, this._config.scaledCharHeight / 2, this._config.scaledCharWidth);
     this._tmpCtx.restore();
 
     // clear the background from the character to avoid issues with drawing over the previous
